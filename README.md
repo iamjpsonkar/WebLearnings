@@ -724,3 +724,196 @@ h1::before{
 ```
 
 
+# Layouts
+how the text, image and other content is placed over a webpage.
+
+## Types of layout
+Arranging the different elements in an organized manner.
+
+### Page Layout
+Arranging the different components of the page.
+
+### Component Layout
+Arranging the different elements of the components.
+
+## Way of building layout
+
+### Using Float
+The old way of building layouts of all sizes uses the float CSS property. Still used, but getting outdated fast.
+
+-Elements are removed from the normal flow: "out of flow"
+
+- Text and inline elements will wrap around the floated elements.
+
+- The container will not adjust its height to the element. This is known as **collapsing of heights**.
+
+- The container will not adjust its width to the element, and so it will put all the elements down if they are taking higher dimensions than the available ones.
+
+```css
+Selector {
+  float: left; /*will take element out from normaal flow and put them in left of the flow. */
+  float: right; /*will take element out from normaal flow and put them in right of the flow. */
+}
+```
+
+#### Clearing floats
+To avoid the problem of collapsing height we can use one trick.
+
+1. Add an empty div with clear property
+
+    Add an empty div inside the container, and in the style of that empty container add the clear property of CSS.
+    ```css
+    selector {
+      clear: left; /* for left float*/
+      clear: right; /* for right float*/
+      clear: both; /* for both*/
+    }
+    ```
+
+2. Using pseudo-element **after**
+    Instead of adding an empty div to solve the problem of collapsing height, we can add a "clearfix" class in the container and add the following properties
+    ```css
+    .clearfix::after {
+      content:"";
+      clear:both;
+      display:block;
+    }
+    ```
+
+#### Higher width issue
+This problem arises because of the box model, as the margin and the padding get added for the dimension of the element, we can use the property box-sizing to solve this issue. This will adjust the margin and padding, and hence overall dimension will be the same as the content.
+```css
+selector{
+  box-sizing: border-box;
+}
+```
+
+### Using Flexbox
+The modern way of laying out elements in a 1-dimensional row without using floats. Perfect for component layouts.
+
+Any container element, having some child can be used for flexbox. In this, the display property of the container is set to flex. This causes the elements to get horizontally aligned inside the container. All children will occupy only the required size.
+
+```css
+.container {
+  display: flex;
+}
+```
+1. Flexbox is a set of related CSS properties for building 1-dimensional layouts.
+2. The main idea behind flexbox is that space inside a container element can be automatically divided by its child elements.
+3. Flexbox makes it easy to automatically align items to one another inside a parent container, both horizontally and vertically.
+4. flexbox solves common problems such as vertical centering and creating equal-height columns.
+5. Flexbox is perfect for replacing floats, allowing us to write fewer and cleaner HTML and CSS code.
+
+Container Element -> Flex container
+Child Elements -> Flex items
+Horizontal axis -> Main axis
+Vertical axis -> Cross axis
+
+#### CSS properties for Flex Container
+
+1. **gap:0 | < length >**: To create space between items, without using a margin.
+2. **justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly**: align items along the main axis (horizontally, by default)
+3. **align-items: stretch | flex-start | flex-end | center | baseline**: To align items along the cross axis (vertically, by default)
+4. **flex-direction: row | row-reverse | column | column-reverse**: To define which is the main axis
+5. **flex-wrap:nowrap | wrap | wrap-reverse**: To allow items to wrap into a new line if they are too large
+6. **align-content: stretch | flex-start | flex-end | center | space-between | space-around**: only applies when there are multiple lines (flex-wrap: wrap)
+
+#### CSS properties for Flex Items
+
+1. **align-self: auto | stretch | flex-start | flex-end | baseline** : To overwrite align-items for individual flex items
+2. **flex-grow: 0 | < integer >**: To allow an element to growing (0 means No, 1+ means Yes)
+3. **flex-shrink: 0 | < integer >**: To allow an element to shrink (0 means no, 1+ means yes)
+4. **flex-basis: auto | < length >**: To define an item's width, instead of the width property
+5. **flex: 0 1 auto | < int > < int > < length >** : Recommended shorthand for flex-grow, flex-shrink, flex-basis
+6. **order : 0 | < integer >**: 
+  Controls order of items, -1 makes item first, 1 makes it last
+
+
+
+
+### Using CSS-grid
+For laying out elements in a full-fledged 2-dimensional grid. Perfect for page layouts and complex components.
+
+```css
+.container {
+  display:grid;
+  grid-template-columns:1px 2px 3px ;
+  grid-template-rows:1px 2px 3px ;
+  grid-gap:1px;
+  column-gap:1px;
+  row-gap;1px;
+}
+```
+
+- CSS Grid is a set of CSS properties for building 2-dimensional layouts
+- The main idea behind the CSS grid is that we divide a container element into rows and columns that can be filled with its child elements.
+- In two-dimensional contexts, CSS grid allows us to write less nested HTML and easier-to-read CSS
+- CSS Grid is not meant to replace flexbox! instead, they work perfectly together.
+
+1-D layout -> Use flexbox
+2-D layout -> Use CSS grid
+
+display: grid;
+container: Grid Container;
+element: Grid items;
+Horizontal axis: Row Axis;
+Vertical axis: Column Axis
+Grid lines: separating cells of grids
+Grid cell: one cell
+Grid track/row: a horizontal row of grid
+Grid track/columns: vertical column of grids
+Gutters: space between cells (gaps)
+
+#### Grid Containers properties
+1. grid-template-rows: < track size > *
+2. grid-template-columns: < track size > *
+3. row-gap: 0 | < length >
+4. column-gap: 0 | < length >
+5. justify-items: stretch | start | center | end: **align-items inside rows (horizontally)**
+6. align-items: stretch | start | center | end: **align-items inside columns (vertically)**
+7. justify-content: stretch | start | center | end: **align the entire grid inside the grid container (horizontally) if the container is larger than the grid.**
+6. align-content: stretch | start | center | end: **align the entire grid inside the grid container (vertically) if the container is larger than the grid.**
+
+#### Grid Items properties
+1. grid-column: < start line > / < end line > | span < number >: **To place a grid item into a specific cell, based on line numbers. span keyword can be used to span an item across more cells.**
+2. grid-row: < start line > / < end line > | span < number >: **To place a grid item into a specific cell, based on line numbers. span keyword can be used to span an item across more cells.**
+3. justify-self: stretch | start | center | end : **To overwrite justify-items for single item;**
+4. align-self: stretch | start | center | end : **To overwrite align-items for single items;**
+
+In **grid-template-rows** and **grid-template-columns** instead of using **Npx**, you can use **Xfr**, where X means Xth fraction of the total size. If you put **auto** then it will automatically adjust according to the remaining space.
+
+#### repeat function of CSS
+```css
+.container {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr); /* This will create grid-template-columns: 1fr 1fr 1fr 1fr; */
+}
+```
+
+#### using grid-column and grid-row
+```css
+.element--4{
+  grid-column: 2 / 3; /* This will move to the grid item to 2nd column */
+  grid-row: 1 / 2; /* This will move to the grid item to 1st row */
+}
+
+.element--4{
+  grid-column: 2; /* This will move to the grid item to 2nd column */
+  grid-row: 1; /* This will move to the grid item to 1st row */
+}
+
+.element--4{
+  grid-column: 2 / 5; /* This will move to the grid item from 2nd column to 5th column*/
+  grid-row: 1 / 3; /* This will move to the grid item from 1st row to 4rd row*/
+}
+
+.element--4{
+  grid-column: 2 / span 3; /* This will move to the grid item from 2nd column 2nd + 3 column*/
+  grid-row: 1 / span 3; /* This will move to the grid item from 1st row to 1st + 3 row*/
+}
+
+.element--4{
+  grid-column: 1 / -1; /* This will cover the whole column*/
+  grid-row: 1 / -1; /* This will cover the whole row*/
+}
+```
