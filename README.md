@@ -1333,7 +1333,7 @@ text-shadow: 20px 20px 20px COLOR;
 
 ### RULE:24 What is USER EXPERIENCE (UX)?
 
-- <blockquote>
+<blockquote>
 Design is not just what it looks like and feels like. Design is how it works.    -- Steve Jobs
 </blockquote>
 
