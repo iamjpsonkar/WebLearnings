@@ -917,3 +917,471 @@ In **grid-template-rows** and **grid-template-columns** instead of using **Npx**
   grid-row: 1 / -1; /* This will cover the whole row*/
 }
 ```
+
+# Web Design Rules and Framework
+
+## Web Design Ingredients
+
+1. **Typography**
+2. **Colors**
+3. **Images/illustration**
+4. **Icons**
+5. **Shadows**
+6. **Border-radius**
+7. **Whitespace**
+8. **Visual Hierarchy**
+9. **User Experience**
+10. **Components/layout**
+
+## Website Personality
+
+1. **Serious/Elegant**: For luxury and elegance, based on thin serif typefaces, golden or pastel colors, and big high-quality images.
+
+2. **Minimalist/Simple**: Focuses on the essential text content, using small or medium-sized sans-serif black text, lines, and a few images and icons.
+
+3. **Plain/Neutral**: Design that gets out of the way by using neutral and small typefaces, and a very structured layout. Common in big corporations.
+
+4. **Bold/Confident**: Makes an impact, by featuring big and bold typography, paired with the confident use of big and bright colored boxes.
+
+5. **Calm/Peaceful**: For products and services that care, transmitted by calming pastel colors, soft serif headings, and matching images/illustrations.
+
+6. **Startup/Upbeat**: Widely used in startups, featuring medium-sized sans-serif typefaces, light-gray text and backgrounds, and rounded elements.
+
+7. **Playful/Fun**: Colorful and round design, fueled by creative elements like hand-drawn icons or illustrations, animations, and fun language. 
+
+
+## Typography
+
+<blockquote>
+Typography is the art and technique of arranging type to make written language legible, readable and appealing when displayed.        --Wikipedia
+</blockquote>
+
+**Serif**
+1. Has a tail at all the corners of the letter.
+2. Creates a traditional classic look  and feel
+3. Conveys trustworthiness
+4. Good for long text
+Example
+> <b style="font-family:serif;">This is a Serif text.</b>
+
+**Sans-Serif**
+1. No tail at any corner of the letter.
+2. Modern  and feel
+3. Clean and simple
+4. Easier to choose for beginner designer!
+Example
+> <b style="font-family:sans-serif;">This is a Serif text.</b>
+
+
+
+### Rule:1 Use Good Typefaces
+
+1. Use only good and popular typefaces and play it safe
+
+2. It's ok to use just one typeface per page! If you want more, limit to 2 typefaces.
+
+3.  Choose the right typeface according to your website personality
+
+<blockquote>
+
+SANS-SERIF
+  - Inter
+  - Open Sans
+  - Roboto
+  - Monsterrat
+  - Work Sans
+  - Lato
+
+  SERIF
+  - Merriweather
+  - Aleo
+  - Playfair Display
+  - Cormorant
+  - Cardo
+  - Lora
+
+Toolbox: **Google fonts, and Font Squirrel**
+
+</blockquote>
+
+### Rule:2 Use  Good Font Sizes and Weights
+
+4. When choosing font sizes, limit choices! Use a "type scale" tool or other pre-defined range
+
+5. Use a font size between 16px and 32px for normal text
+
+6. For long text (like a blog post), try a size of 20px or even bigger
+
+7. for headlines, you can go big (50px+) and bold (600+), depending on the personality
+
+8. For any text, don't use a font-weight under 400 (regular)
+
+<blockquote>
+FONT SIZE SYSTEM (px)
+
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+</blockquote>
+
+### Rule:3 Create a Good Reading Experience
+
+9. Use less than 75 characters per line
+
+10. For normal-sized text, use a line height between 1.5 and 2. for big text, go below
+
+    The smaller or longer the text, the larger the height needs to be!
+
+11. Decrease letter spacing in headlines, if it looks unnatural
+
+12. Experiment with all caps for short titles. Make them small and bold and increase the letter spacing
+
+13. Usually, don't justify text
+
+14. Don't center long text blocks. Small blocks are fine.
+
+<blockquote>
+SPACING SYSTEM (px)
+
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+</blockquote>
+
+## COLORS
+
+### Rule:4 Choose the Right Color
+
+1. Make the main color match your website's personality: colors convey meaning!
+
+    - <span style="margin-right:2px;background-color:red;">Red</span> draws a lot of attention and symbolizes power, passion, and excitement
+
+    - <span style="margin-right:2px;background-color:orange;color:black;">Orange</span> is less aggressive and conveys happiness, cheerfulness, and creativity
+
+    - <span style="margin-right:2px;background-color:yellow;color:black;">Yellow</span> means joy, brightness, and intelligence
+
+    - <span style="margin-right:2px;background-color:green;">Green</span> represents harmony, nature, growth, and health
+
+    - <span style="margin-right:2px;background-color:blue;">Blue</span> is associated with peace, trustworthiness, and professionalism
+
+    - <span style="margin-right:2px;background-color:purple;">Purple</span> conveys wealth, wisdom, and magic
+
+    - <span style="margin-right:2px;background-color:pink;color:black;">Pink</span> represents romance, care, and affection
+
+    - <span style="margin-right:2px;background-color:brown;">Brown</span> is associated with nature, durability and comfort
+
+    - <span style="margin-right:2px;background-color:black;"> Black</span> symbolizes power elegance and minimalism, but also grief and sorrow
+
+2. Use a good color tone! Don't choose a random tone or CSS named colors.
+
+    > TOOLBOX : **Open color, tailwindcss, flat ui colors 2**
+
+### Rule:5 Establish a Color System
+
+3. You need at least two types of colors in your color palette: the main color and the grey color, you can use 
+
+4. With more experience, you can add more colors: accent colors (use a tool)
+
+5. For diversity, create lighter and darker versions (tint and shades)
+
+    > TOOLBOX: **Tint & Shade Generator, pallenton.com, coolors**
+
+### Rule:6 When and How to use COLORS
+
+6. Use your main color to draw attention to the most important elements on the page
+
+7. Use colors to add interesting accents or make entire component or section stand out
+
+8. You can try to use your color strategically in images and illustrations.
+
+### Rule:7 Colors and Typography
+
+9. On dark-colored backgrounds, try to use a tint of the background (" lighter version") for text
+
+10. The text should usually not be completely black. Lighten it up it looks heavy and uninviting
+
+11. Don't make the text too light! Use a tool to check the contrast between text and background colors
+<blockquote>
+The contrast ratio needs to be at least 4.5:1 for normal text and 3:1 for large text (18px+)
+
+TOOLBOX: **coolors**
+</blockquote>
+
+## Images/illustration
+
+### Rule:8 Use Good Images
+
+1. Different types of images: product images, storytelling photos, illustrations, patterns
+
+2. Use images to support your website's message and story. So only use relevant images!
+
+3. Prefer original images. If not possible, use original-looking stock images (not generic ones!)
+
+    <blockquote>
+
+    TOOLBOX: **Unsplash, Pexels, DrawKit, unDraw**
+    </blockquote>
+
+### Rule:9 Use Images Well
+
+4. Try to show real people to trigger the user's emotions
+
+5. If necessary, crop images to fit your message
+
+6. Experiment with combining photos, illustrations and patterns
+
+### Rule:10 Handling Text on Images
+
+7. Method #1: Darker or brighten the image (completely or partially using a gradient)
+
+8. Method #2: Position text into a neutral image area
+
+9. Method #3: Put text in a box
+
+### Rule:11 Some Technical Details
+
+10. To account for high-res screens, make image dimensions 2X as big as their displayed size.
+
+- Scale factor: Actual pixels the screen contains / pixels represented on the screen
+
+- On high-res screens, scale factor is 2X or even 3X, on normal screens it's just 1x (1 physical pixel = 1 design pixel)
+
+11. Compress images for lower file size and better performance
+
+    <blockquote>
+
+    TOOLBOX: **Squash**
+    </blockquote>
+
+12. When using multiple images side-by-side, make sure they have the same dimensions
+
+## Icons
+
+### Rule:12 Use Good Icons
+
+1. Use a good icon pack, there are tons of free and paid icons packs.
+
+<blockquote>
+
+TOOLBOX: **Phosphor icons, ionicons, icons8**
+</blockquote>
+
+2. Use only one icon pack, Don't mix icons from different icon packs
+
+3. Use SVG icons or icon fonts. Don't use bitmap images formats (.jpg and .png)
+
+- BITMAP
+	- Regular Images, PNG, JPG and GIF
+	- Do not scale, become unsharp!
+- Vector-Based
+	- SVG images and icon fonts
+	- Scale indefinitely
+
+4. Adjust to website personality! Roundness, weight and filled/outlined depend on typography
+
+
+### Rule:13 When to use ICONS
+
+5. Use icons to provide visual assistance to text
+
+6. Use icons for product feature blocks
+
+7. Use icons associated with actions, and label them (unless no space or icon is 100% clear)
+
+8. Use icons as bullet points
+
+### Rule:14 Use ICONS well
+
+9. To keep icons neutral, use the same color as the text, to draw attention, use different color
+
+10. Don't confuse your users: icons need to make sense and fit the text or action!
+
+11. Don't make icons larger than what they were designed for. If needed, enclose them in a shape.
+
+12. Use the stroke property to change the outline and fill to change the filled color of the SVG.
+```css
+.icon-1{
+  stroke:blue;
+  fill:red;
+}
+```
+
+## Shadows
+
+- After an era of 100% flat design, we are now back to using shadows in UI design (flat design 2.0)
+
+- Shadow creates depth (3D): The more shadow, the further away from the interface element.
+
+- Shadow can be used on boxes and text.
+
+### Rule:15 Use SHADOWS WELL
+
+1. You don't have to use shadows! Only use them if it makes sense for the website personality.
+
+2. Use shadows in small doses: don't add shadows to every element!
+
+3. Go light on shadows, don't make them too dark!
+
+### Rule:16 Use SHADOWS in the RIGHT SITUATION
+
+4. Use small shadows for smaller elements that should stand out (to draw attention)
+
+5. Use medium-sized shadows for larger areas that should stand out a bit more
+
+6. Use large shadows for elements that should really float above the interface.
+
+7. Experiment with changing shadows on mouse interaction (click and hover)
+
+    Normal -> Flat
+    Hover -> Medium-sized shadow
+    Click -> Smaller shadow
+
+8. Experiment with glows (colored shadows)
+
+```css
+.container {
+box-shadow: 20px 20px 20px 20px COLOR;
+}
+```
+```css
+.container {
+text-shadow: 20px 20px 20px COLOR;
+}
+```
+
+## Border-Radius
+
+### Rule:17 Use BORDER_RADIUS Well
+
+1. Use border-radius to increase the playfulness and fun of the design, to make it less serious.
+
+2. The typeface has a certain roundness: make sure that the border radius matches that roundness!
+
+3. Use border-radius on buttons, images, around icons, standout sections and other elements
+
+    ```css
+    .container {
+    border-radius: 50px;
+    }
+    ```
+
+## White Space
+
+### Rule:18 When and Where to use WHITESPACE
+
+- The right amount of whitespace makes designs look clean, modern and polished.
+
+- Whitespace communicates how different pieces of information are related to one another.
+
+- Whitespace implies invisible relationships between the elements of a layout.
+
+1. Use tons of whitespace between sections
+
+2. Use a lot of whitespace between groups of elements
+
+3. Use whitespace between elements
+
+4. Inside groups of elements, try to use whitespace instead of lines
+
+### RULE:19 How much WHITE SPACE
+
+5. The more some elements (or groups of elements) belong together, the closer they should be! **Law of Proximity**
+
+6. Start with a lot of whitespaces, maybe even too much! Then remove whitespace from there.
+
+	- Too much whitespace looks detached
+	- Too little looks too crammed
+
+7. Match other design choices. If you have big text or big icons, you need more whitespace
+
+8. Try a hard rule, such as using multiples of 2px, 4px, 8px, and 16px for all spacing
+
+
+## Visual Hierarchy
+
+### Rule:20 What is Visual Hierarchy
+
+- Visual Hierarchy is about establishing which elements of a design are the most important ones
+
+- Visual hierarchy is about drawing attention to these most important elements
+
+- Visual hierarchy is about defining a "path" for users, to guide them through the page
+
+- We use a combination of position, size, colors, spacing, borders, and shadows to establish a meaningful visual hierarchy between elements/components
+
+### RULE: 21 Visual Hierarchy Fundamentals
+
+1. Position important elements closer to the top of the page, where they get more attention.
+
+2. Use images mindfully, as they draw a lot of attention (larger images get more attention)
+
+3. Whitespace creates separation, so use whitespace strategically to emphasize elements
+
+### RULE:22 Visual Hierarchy for TEXT ELEMENTS
+
+4. For text elements, use font size, font weight, color, and whitespace to convey the importance
+
+5. What text elements to emphasize? Titles, sub-titles, links, buttons, data points, icons
+
+	- You can also de-emphasize less important text, like labels or secondary/additional information
+
+### RULE:23 Visual Hierarchy BETWEEN COMPONENTS
+
+6. Emphasize an important component using background color, shadow, or border (or multiple)
+
+7. Try emphasizing some component A over component B  by de-emphasizing component B.
+
+8. What components to emphasize? Testimonials, call-to-action sections, highlight sections, preview cards, forms, pricing tables, important rows/columns in tables, etc.
+
+## USER EXPERIENCE
+
+### RULE:24 What is USER EXPERIENCE (UX)?
+
+- <blockquote>
+Design is not just what it looks like and feels like. Design is how it works.    -- Steve Jobs
+</blockquote>
+
+- User Interface (UI) is the visual presentation of a product. It's how the graphical interface looks and feels.
+
+- User Experience (UX) is the overall experience the user has while interacting with the product
+
+### RULE:25 UI and UX Design
+
+- UI is a graphical interface
+
+- UI Design is what makes an interface beautiful
+
+- UX experiences with interface
+
+- UX design is what makes an interface useful and functional
+
+- UX design can not exist without UI Design
+
+### RULE:26 UX Design Guiding Principle: GOALS
+
+- A website or application exists for a reason: a user has a goal for visiting it, and a goal for creating it.
+
+- Good UX design aligns the user's goals with the business goals
+
+### RULE:27 UX Rules for Usability
+
+1. Don't design complicated layouts. Don't reinvent the wheel. Use patterns that users know.
+
+2. Make your call-to-action the most prominent element, and make the descriptive
+
+3. Use blue text and underlined text only for links!
+
+4. Animations should have a purpose and be fast: between 200 and 500ms.
+
+5. In forms, align labels and fields in a single vertical line, to make the form easier to scan
+
+6. Offer users good feedback for all actions: form errors, form success, etc. [web apps]
+
+7. Place action buttons where they will create an effect (law of locality) [Web Apps}
+
+
+### RULE:28 UX Rules for Website Content
+
+8. Use a descriptive, keyword-focused headline on your main page. Don't be vague or fancy!
+
+9. Only include relevant information, efficiently! Cut out the fluff and make the content 100% clear.
+
+10. Use simple words! Avoid technical jargon and "smart-sounding" words
+
+11. Break up long text with sub-headings, images, block quotes, bullet points etc.
