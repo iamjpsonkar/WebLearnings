@@ -1125,6 +1125,129 @@ function outerFunction() {
 outerFunction();
 ```
 
+## Class
+In JavaScript, you can create classes using the ES6 class syntax. Classes provide a more familiar and cleaner syntax for defining object blueprints compared to the traditional prototype-based inheritance.
+
+```js
+class MyClass {
+  constructor(property1, property2) {
+    this.property1 = property1;
+    this.property2 = property2;
+  }
+
+  method1() {
+    console.log('Method 1');
+  }
+
+  method2() {
+    console.log('Method 2');
+  }
+}
+```
+
+- MyClass is the class name.
+- constructor is a special method for creating and initializing objects created with a class.
+- method1 and method2 are methods defined in the class.
+
+```js
+let instance = new MyClass('value1', 'value2');
+instance.method1(); // Output: Method 1
+console.log(instance.property1); // Output: value1
+```
+
+### Inheritance
+
+```js
+class MySubClass extends MyClass {
+  constructor(property1, property2, property3) {
+    super(property1, property2);
+    this.property3 = property3;
+  }
+
+  method3() {
+    console.log('Method 3');
+  }
+}
+```
+
+## Synchronous and Asynchronous Programming:
+
+### Synchronous Programming
+In synchronous programming, code is executed sequentially, one statement at a time. Each statement waits for the previous one to complete before executing. Synchronous code is straightforward and easier to understand, as the flow of execution is predictable.
+```js
+console.log('Statement 1');
+console.log('Statement 2');
+console.log('Statement 3');
+
+/*
+Statement 1
+Statement 2
+Statement 3
+*/
+```
+
+### Asynchronous Programming
+In asynchronous programming, tasks can be executed independently of the main program flow. Asynchronous operations are non-blocking, meaning that while an operation is being performed, the program can continue to execute other tasks. Callback functions, Promises, and async/await are common techniques used for handling asynchronous code in JavaScript.
+
+```js
+console.log('Statement 1');
+
+setTimeout(function() {
+    console.log('Statement 2');
+}, 1000);
+
+console.log('Statement 3');
+
+/*
+Statement 1
+Statement 3
+Statement 2
+*/
+```
+
+### Promises and async/await
+Promises and async/await are modern JavaScript features for handling asynchronous code in a more readable and manageable way.
+
+#### Promise
+
+```js
+console.log('Statement 1');
+
+new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        console.log('Statement 2');
+        resolve();
+    }, 1000);
+}).then(function() {
+    console.log('Statement 3');
+});
+```
+
+#### Async/Await
+
+```js
+async function myFunction() {
+    console.log('Statement 1');
+    
+    await new Promise(function(resolve) {
+        setTimeout(function() {
+            console.log('Statement 2');
+            resolve();
+        }, 1000);
+    });
+
+    console.log('Statement 3');
+}
+
+myFunction();
+```
+
+Asynchronous programming is commonly used in JavaScript for tasks such as fetching data from servers, handling user input, and performing time-consuming operations without blocking the main thread.
+
+
+
+
+
 # Layouts
 how the text, image and other content is placed over a webpage.
 
