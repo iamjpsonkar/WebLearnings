@@ -722,7 +722,408 @@ h1::before{
   ...;
 }
 ```
+> # JS : Javascript
 
+## How to include in HTML
+```js
+<script src="file.js"></script>
+```
+
+## console.log
+```js
+console.log("Hello");
+```
+
+## Let, Const, Var
+```js
+let a; // best practice
+var b; // gloabal scope
+const c=10; // can't be changed
+```
+
+## Types of datatype
+- string
+- number
+- boolean
+
+## Operators
+- `+` concat or addition
+- other operators
+
+## Arrays
+Arrays in JavaScript are used to store multiple values in a single variable. They are a special type of object, with a numeric index that starts at zero.
+
+### Array Declaration:
+You can declare an array using square brackets `[]` and provide values separated by commas:
+```js
+let fruits = ["Apple", "Banana", "Orange"];
+```
+
+### Accessing Array Elements:
+You can access elements of an array using square bracket notation with the index:
+```js
+console.log(fruits[0]); // Output: Apple
+console.log(fruits[1]); // Output: Banana
+```
+
+### Modifying Array Elements:
+You can modify array elements by assigning new values to specific indices:
+```js
+fruits[0] = "Mango";
+console.log(fruits); // Output: ["Mango", "Banana", "Orange"]
+```
+
+### Array Length:
+You can get the length of an array using the `length` property:
+```js
+console.log(fruits.length); // Output: 3
+```
+
+### Adding Elements:
+You can add elements to the end of an array using the `push()` method, or at the beginning using the `unshift()` method:
+```js
+fruits.push("Grapes");
+console.log(fruits); // Output: ["Mango", "Banana", "Orange", "Grapes"]
+
+fruits.unshift("Pineapple", "Grapes");
+console.log(fruits); // Output: ["Pineapple", "Mango", "Banana", "Orange", "Grapes"]
+```
+
+### Removing Elements:
+You can remove elements from the end of an array using the `pop()` method, or from the beginning using the `shift()` method:
+```js
+fruits.pop();
+console.log(fruits); // Output: ["Pineapple", "Mango", "Banana", "Orange"]
+
+fruits.shift();
+console.log(fruits); // Output: ["Mango", "Banana", "Orange"]
+```
+
+### Array Methods:
+JavaScript arrays come with built-in methods for various operations such as `concat()`, `slice()`, `splice()`, `indexOf()`, `includes()`, `join()`, `reverse()`, `sort()`, etc.
+
+```js
+var numbers = [3, 1, 2];
+var fruits = ["Banana", "Orange", "Apple"];
+
+// concat(): Concatenates two or more arrays
+var combinedArray = numbers.concat(fruits);
+console.log("concat():", combinedArray);
+
+// slice(): Returns a shallow copy of a portion of an array into a new array
+var slicedArray = combinedArray.slice(2, 5);
+console.log("slice():", slicedArray);
+
+// splice(): Changes the contents of an array by removing or replacing existing elements and/or adding new elements
+var splicedArray = combinedArray.splice(2, 2, "Pineapple", "Grapes");
+console.log("splice():", splicedArray, combinedArray);
+
+// indexOf(): Returns the first index at which a given element can be found in the array, or -1 if it is not present
+var index = combinedArray.indexOf("Apple");
+console.log("indexOf():", index);
+
+// includes(): Determines whether an array includes a certain value among its entries
+var includes = combinedArray.includes("Mango");
+console.log("includes():", includes);
+
+// join(): Joins all elements of an array into a string
+var joinedString = combinedArray.join(" | ");
+console.log("join():", joinedString);
+
+// reverse(): Reverses the order of the elements in an array
+var reversedArray = combinedArray.reverse();
+console.log("reverse():", reversedArray);
+
+// sort(): Sorts the elements of an array in place and returns the sorted array
+var sortedArray = numbers.sort();
+console.log("sort():", sortedArray);
+```
+
+
+## Objects
+objects are a fundamental data type that allows you to store collections of key-value pairs. Objects are versatile and can represent complex data structures.
+
+### Object Declaration
+You can declare an object using curly braces `{}` and define its properties inside:
+```js
+var person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+```
+
+### Accessing Properties
+You can access object properties using dot notation or square bracket notation:
+```js
+console.log(person.name); // Output: John
+console.log(person['age']); // Output: 30
+```
+
+### Adding or Modifying Properties:
+You can add new properties or modify existing ones by assignment:
+```js
+person.gender = "Male"; // Adding a new property
+person.age = 31; // Modifying an existing property
+```
+
+### Deleting Properties:
+You can delete properties using the `delete` keyword:
+```js
+delete person.city;
+```
+
+### Object Methods:
+You can define functions as properties of an object, which are called methods:
+```js
+var person = {
+  name: "John",
+  greet: function() {
+      console.log("Hello, my name is " + this.name);
+  }
+};
+person.greet(); // Output: Hello, my name is John
+```
+
+### Object keys and Values:
+You can get object's properties using  `Object.keys()`, `Object.values()`, or `Object.entries()` methods:
+```js
+let keys = person.keys();
+let values = person.values();
+let entities = person.entities();
+```
+### Object Prototypes:
+In JavaScript, objects can inherit properties and methods from other objects through prototypes.
+```js
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Person.prototype.greet = function() {
+    console.log("Hello, my name is " + this.name);
+};
+
+var john = new Person("John", 30);
+john.greet(); // Output: Hello, my name is John
+```
+
+## Conditional Statements
+
+### If Else
+```js
+let age = 18;
+if(age<18){
+  console.log("Not Eligible");
+} else {
+  console.log("Eligible");
+}
+```
+
+### Switch
+```js
+let ch = 2;
+switch(ch){
+  case 1:
+    console.log("I am 1");
+    break;
+  case 2:
+    console.log("I am 2");
+    break;
+  default:
+    console.log("I am"+ch);
+  
+}
+```
+
+## Loops
+
+### for loop
+```js
+for(let x=0; x<=10; x++){
+  console.log(x);
+}
+```
+
+### while loop
+```js
+let x=0;
+while(x<=10){
+  console.log(x);
+  x++;
+}
+```
+
+### do...while Loop
+```js
+let x=0;
+do {
+  console.log(x);
+  x++;
+}while(x<=10);
+```
+
+### for...in loop
+```js
+let obj = {
+  a : 'a',
+  b : 'b',
+  c : 'c',
+  d : 'd',
+};
+for(let x in obj){
+  console.log(obj[x]);
+}
+```
+### for...of loop
+```js
+let obj = {
+  a : 'a',
+  b : 'b',
+  c : 'c',
+  d : 'd',
+};
+for(let x of obj){
+  console.log(x);
+}
+```
+
+### forEach method
+```js
+let arr = [1, 2, 3, 4];
+arr.forEach( data => {
+  console.log(data);
+});
+```
+
+
+## Functions
+
+### Named Function
+
+These are defined with the function keyword followed by the function name. They can be called before they are declared (due to hoisting).
+```js
+function myfunction(a,b){
+    console.log(a+b);
+}
+```
+
+### Anonymous Functions
+
+These are functions without a name. They are commonly used as function expressions or as arguments to other functions.
+```js
+var newfun = function(a,b) {
+    console.log(a+b);
+}
+```
+
+### Arrow Functions
+Introduced in ES6, arrow functions provide a concise syntax and lexical scoping of `this` keyword.
+```js
+var myfun = (a,b) => {
+    console.log(a+b);
+}
+```
+
+### Immediately Invoked Function Expressions (IIFE)
+Functions that are executed immediately after they are created.
+```js
+(function (a,b){
+  console.log(a+b);
+}());
+```
+
+## Type Conversion
+
+### Implicit Type Conversion (Type Coercion)
+JavaScript automatically converts the data type of a value when needed. For example, when using the `+` operator with a string and a number, JavaScript will convert the number to a string and perform string concatenation.
+```js
+var num = 10;
+var str = "The number is: " + num; // Implicit conversion of num to a string
+```
+
+### Explicit Type Conversion (Type Casting)
+Developers can explicitly convert values from one type to another using conversion functions or operators.
+
+#### String Conversion
+You can convert values to strings using the `String()` function or the `.toString()` method.
+```js
+var num = 10;
+var str = String(num);
+```
+
+### Number Conversion
+You can convert values to numbers using the `Number()` function or the `parseInt()` and `parseFloat()` functions.
+```js
+var str = "10";
+var num = Number(str);
+```
+
+### Boolean Conversion
+Values can be converted to boolean using the `Boolean()` function.
+```js
+var str = "true";
+var bool = Boolean(str);
+```
+
+## Try, Catch and Throw
+In JavaScript, `try`, `catch`, and `throw` are keywords used for error handling. They help you manage errors gracefully within your code. 
+
+### try Statement
+The try statement allows you to specify a block of code to be tested for errors while it is being executed:
+```js
+try {
+  // Code that may throw an error
+} catch (error) {
+  // Code to handle the error
+}
+```
+
+### catch Clause
+The catch clause is used to handle the error thrown in the try block. If any error occurs within the try block, the catch block will be executed:
+```js
+try {
+  // Code that may throw an error
+} catch (error) {
+  // Code to handle the error
+  console.log("An error occurred:", error.message);
+}
+```
+
+### throw Statement
+The throw statement allows you to create a custom error. It can be used inside the try block to manually generate an error:
+```js
+try {
+  // Code that may throw an error based on some condition
+  if (condition) {
+    throw new Error("Custom error message");
+  }
+} catch (error) {
+  // Code to handle the error
+  console.log("An error occurred:", error.message);
+}
+```
+
+## Lexical scope
+Lexical scope is a concept in JavaScript that describes how variable and function names are resolved during the compilation phase. It determines the visibility and accessibility of variables and functions within nested scopes based on the location of the code within the source code.
+
+In lexical scope (also known as static scope), the visibility of variables and functions is determined by their placement in the source code. When a function is defined within another function, the inner function has access to the variables and functions defined in the outer function's scope, as well as any scopes that enclose it. However, the outer function does not have access to the variables and functions defined within the inner function's scope.
+
+```js
+function outerFunction() {
+    var outerVariable = "I am from outerFunction";
+
+    function innerFunction() {
+        var innerVariable = "I am from innerFunction";
+        console.log(outerVariable); // Accessible
+    }
+
+    innerFunction();
+    // console.log(innerVariable); // Not accessible
+}
+
+outerFunction();
+```
 
 # Layouts
 how the text, image and other content is placed over a webpage.
@@ -1385,3 +1786,111 @@ Design is not just what it looks like and feels like. Design is how it works.   
 10. Use simple words! Avoid technical jargon and "smart-sounding" words
 
 11. Break up long text with sub-headings, images, block quotes, bullet points etc.
+
+
+# Components and Layout Patterns
+
+## From Elements to Webpage
+
+Elements > Components > Layout > Webpage
+
+1. Use common elements and components to convey your website's information
+
+2. Combine components into layout using common layout patterns
+
+3. Assemble different layouts into a complete, final page
+
+## Elements
+
+1. Text
+2. Buttons
+3. Images
+4. Input Elements
+5. Tags
+
+## Components
+
+1. Breadcrumbs
+2. Pagination
+3. Alert and status bars
+4. Statistics
+5. Gallery
+6. Feature Box
+7. Preview and profile cards
+8. Accordion
+9. Tabs
+10. Carousel
+11. Customer testimonials
+12. Customer logos
+13. Featured-in logos
+14. Steps
+15. Forms
+16. Tables
+17. Pricing tables
+18. Modal windows
+
+## Section Components
+
+1. Navigation
+2. Hero section
+3. Footer
+4. Call-to-action section
+5. Feature row
+
+## Layout Patterns
+1. A row of boxes or cards
+2. Grid of boxes or cards
+3. Z-pattern
+4. F-pattern
+5. Single-column
+6. Sidebar
+7. Multi-column/magazine
+8. Asymmetry/Experimental
+
+
+
+# Responsiveness 
+
+Add in HEAD
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+## Media Queries
+```css
+@media (max-width: 600px){
+  /* write css rules */
+}
+ /* means "Is width <=600px?" */
+```
+
+## Breakpoints
+
+### BAD 
+Select the screen size of popular brands
+
+### Good
+Select between the different sizes
+
+1. 600px
+2. 900px
+3. 1200px
+
+### Best
+Where your design breaks
+
+> 1 rem = 1em =16px
+
+> use vh, viewport height
+
+> use vw, viewport width
+
+
+```css
+@media(max-width:100em/16*100px)
+{
+  .container{
+    padding:10rem;
+  }
+}
+```
