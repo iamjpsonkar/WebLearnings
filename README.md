@@ -1244,6 +1244,72 @@ myFunction();
 
 Asynchronous programming is commonly used in JavaScript for tasks such as fetching data from servers, handling user input, and performing time-consuming operations without blocking the main thread.
 
+## API Calls
+In JavaScript, you can make API calls using various methods, such as the `XMLHttpRequest object`, the `fetch()` API, or third-party libraries like Axios. 
+
+### Using XMLHttpRequest
+```js
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'https://api.example.com/data', true);
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        var response = JSON.parse(xhr.responseText);
+        console.log(response);
+    }
+};
+xhr.send();
+```
+
+### Using fetch() API (modern approach)
+```js
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+```
+
+### Using Axios (third-party library):
+First, include Axios in your project:
+```js
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+```
+
+```js
+axios.get('https://api.example.com/data')
+    .then(response => console.log(response.data))
+    .catch(error => console.error('Error:', error));
+```
+
+## DOM
+
+### Add Listener Event
+
+In JavaScript, the addEventListener method is used to attach an event handler to an element. This allows you to specify a function to be executed when a particular event occurs on the element. 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener Example</title>
+</head>
+<body>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        // Get a reference to the button element
+        var button = document.getElementById('myButton');
+
+        // Add an event listener to the button for the 'click' event
+        button.addEventListener('click', function() {
+            alert('Button clicked!');
+        });
+    </script>
+</body>
+</html>
+```
+
 
 
 
