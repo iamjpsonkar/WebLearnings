@@ -2083,3 +2083,59 @@ Where your design breaks
   }
 }
 ```
+
+
+
+> # REACT
+
+Download and Install React, Node, NPM
+
+## Creating an App
+
+`npx create-react-app react_app`
+
+`cd react_app`
+
+`npm start`
+
+## Structure of the App
+```txt
+drwxr-xr-x 1 iamjp 197609      0 Apr 12 16:27 ./
+drwxr-xr-x 1 iamjp 197609      0 Apr 12 16:24 ../
+drwxr-xr-x 1 iamjp 197609      0 Apr 12 16:27 .git/
+-rw-r--r-- 1 iamjp 197609    310 Apr 12 16:25 .gitignore
+drwxr-xr-x 1 iamjp 197609      0 Apr 12 16:27 node_modules/
+-rw-r--r-- 1 iamjp 197609    812 Apr 12 16:27 package.json
+-rw-r--r-- 1 iamjp 197609 718795 Apr 12 16:27 package-lock.json
+drwxr-xr-x 1 iamjp 197609      0 Apr 12 16:27 public/
+-rw-r--r-- 1 iamjp 197609   3359 Apr 12 16:26 README.md
+drwxr-xr-x 1 iamjp 197609      0 Apr 12 16:27 src/
+```
+
+### README.md
+All the commands and basic documentation are present in this file.
+
+### package.json
+list of dependencies needed to run the app.
+
+### package-lock.json
+It contains a list of other dependencies that are needed for the package defined in `package.json`
+
+### .gitignore
+To ignore files/directories that do not need to be pushed or to be part of the actual app.
+
+### node_modules
+Contains packages and module files. 
+
+### src
+Actual react app code, contains `css` and `js` files
+
+### public
+files and code that are publically available.
+
+## Install dependencies
+`npm i`
+
+
+
+
