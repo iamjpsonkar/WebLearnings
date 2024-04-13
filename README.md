@@ -2136,6 +2136,65 @@ files and code that are publically available.
 ## Install dependencies
 `npm i`
 
+## The starting point for the app
 
+You can see there are files in `src` folder, it has `index.js and index.css` also it has `App.js and App.css`. These files are the building blocks for the app.
+- `*.js` : These files contain code that builds the basic structure of the app. It contains `javascript` code with tags that ultimately help to draw the HTML components.
 
+- `*.css` These file contains the `css` code to style the corresponding `*.js` 
+
+### `index.js`
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+reportWebVitals();
+```
+
+`index.js` is the starting point, here we first get the root element of our page, using `const root = ReactDOM.createRoot(document.getElementById('root'));` and then we use `root.render(<React.StrictMode><App /></React.StrictMode>);` to render the `App.js`. All global css code is added in `index.css`
+
+### `App.js`
+
+```js
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+```
+
+As in `index.js` we used `<App />` to render the code of `App.js`, same will be done for other `*.js`.
+
+In `App.js` we have a function `App()` that returns an `HTML code block` and that is getting rendered by `index.js`
 
