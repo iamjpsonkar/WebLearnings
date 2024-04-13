@@ -2198,3 +2198,56 @@ As in `index.js` we used `<App />` to render the code of `App.js`, same will be 
 
 In `App.js` we have a function `App()` that returns an `HTML code block` and that is getting rendered by `index.js`
 
+## REACT Components
+
+### Creating your own App.js
+
+1. Create one file in `src` `App.js`
+2. Add below code in `App.js`
+```js
+function App(){
+  return (
+    <h1>Hello, I am a component</h1>
+  )
+}
+
+export default App;
+```
+3. In `index.js` add the below import statment
+```js
+import App from './App';
+````
+and below code
+```js
+<App />
+```
+
+## Introduction to JSX
+
+`JSX : JavaScript XML` This allows to write HTML code in react.
+
+### adding any variable
+```jsx
+function App(){
+  let a= 23;
+  return (
+    <h1> Value of a is {a}</h1>
+  )
+}
+```
+
+### adding style in elements
+style will be in camel case, eg ~~background-color~~ > backgroundColor
+```jsx
+function App(){
+  let a= 23;
+  return (
+    <h1 style={{backgroundColor:"blue"}}> Value of a is {a}</h1>
+  )
+}
+```
+
+### className
+all properties of css will be camel case, ~~class~~ `className`
+
+
