@@ -2237,7 +2237,7 @@ function App(){
 ```
 
 ### adding style in elements
-style will be in camel case, eg ~~background-color~~ > backgroundColor
+the style will be in camel case, eg ~~background-color~~ > backgroundColor
 ```jsx
 function App(){
   let a= 23;
@@ -2249,5 +2249,70 @@ function App(){
 
 ### className
 all properties of css will be camel case, ~~class~~ `className`
+
+
+## PROPS
+These can be used to pass values to components.
+
+```jsx
+// Component.js
+import React from "react";
+import Component from "./Component"
+
+export default function ComponentList(){
+  students = [
+    {
+      name: "Akshat",
+      age:18,
+      gender: "Male",
+      school: "Delhi Public School"
+    },
+    {
+      name: "Pallav",
+      age:19,
+      gender: "Male",
+      school: "Kendriya Vidyalaya"
+    },
+    {
+      name: "Shubh",
+      age:18,
+      gender: "Male",
+      school: "FGIET"
+    }
+  ]
+  return (
+    <div>
+      students.map((ele) => {
+        return <Component 
+          name={ele.name}
+          age={ele.age}
+          gender={ele.gender}
+          school={ele.school}
+        />
+      })
+    </div>
+  )
+}
+
+// Component.js
+import React from "react";
+
+export default function Component(props){
+  const {name,age,gender,school} = props;
+  return (
+    <div>
+      <div>
+        <h2>{name}</h2>
+      </div>
+      <div>
+        <h4>{age}</h4>
+        <h4>{gender}</h4>
+        <h4>{school}</h4>
+      </div>
+    </div>
+  )
+}
+```
+
 
 
